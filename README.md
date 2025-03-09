@@ -1,8 +1,11 @@
+STEP ONE
+
 🔹 Шаг 1: Установка Django и зависимостей
 📌 1. Создаем виртуальное окружение (рекомендуется)
 Открываем терминал и вводим:
 
 bash
+
 python -m venv venv
 source venv/bin/activate   # для macOS/Linux
 venv\Scripts\activate      # для Windows
@@ -10,9 +13,7 @@ venv\Scripts\activate      # для Windows
 📌 2. Устанавливаем Django и Django REST Framework (DRF)
 bash
 
-pip install django djangorestframework
-
-📌 3. Создаем Django-проект
+pip install django djangorestframework📌 3. Создаем Django-проект
 bash
 
 django-admin startproject backend
@@ -32,7 +33,8 @@ python manage.py startapp core
 Теперь у нас такая структура:
 
 bash
-
+Копировать
+Редактировать
 backend/
 │── backend/          # Настройки Django
 │── core/             # Наше основное приложение
@@ -51,9 +53,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    # Наше приложение - added 'core'
+    # Добавил Наше приложение и REST Framework
     'core',
 
-    # Django REST Framework (для API) - added 'rest_framework'
+    # Django REST Framework (для API)
     'rest_framework',
-]
